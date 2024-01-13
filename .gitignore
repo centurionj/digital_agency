@@ -1,0 +1,25 @@
+# виртуальное окружение
+venv/
+env/
+
+media/
+media_volume/
+
+# локальные настройки
+local_settings.py
+
+# файлы журналов и временные файлы
+*.log
+*.pot
+*.pyc
+__pycache__/
+*.swp
+
+# IDE
+.idea/
+
+# Файлы окружения
+.env
+
+# База данных
+db.sqlite3
