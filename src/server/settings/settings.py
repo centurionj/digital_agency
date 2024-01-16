@@ -12,10 +12,10 @@ SOURCES_ROOT = BASE_DIR.parent
 
 SECRET_KEY = get_random_secret_key()
 
-DEBUG = os.getenv('DEBUG'),
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = [os.getenv('DOMAIN'), 'http://localhost']
+CSRF_TRUSTED_ORIGINS = [os.getenv('DOMAIN'), 'http://localhost:8000']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'server.documents',
     'server.landing',
     'server.portfolio',
-    'server.projects',
+    'server.services',
     'server.workers',
 ]
 
@@ -116,11 +116,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = "/static/"
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+STATICFILES_DIR = [STATIC_DIR]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "server", "static")]
+STATIC_ROOT = os.path.join(SOURCES_ROOT, "server", "static")
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+)
+
+MEDIA_ROOT = os.path.join(SOURCES_ROOT, "media")
+MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -144,7 +152,7 @@ REDIS_PORT = os.getenv('REDIS_PORT')
 
 CELERY_BROKER_URL = 'redis://{}:{}/0'.format(os.getenv('REDIS_HOST'), os.getenv('REDIS_PORT'))
 CELERY_RESULT_BACKEND = 'redis://{}:{}/0'.format(os.getenv('REDIS_HOST'), os.getenv('REDIS_PORT'))
-CELERY_IMPORTS = ('customers.tasks', )
+CELERY_IMPORTS = ('customers.tasks',)
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'

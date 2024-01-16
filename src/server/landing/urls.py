@@ -1,8 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
-from .views import land
+from server.landing.views import LandingView
 
 urlpatterns = [
-    path('', land, name='land'),
+    path('', LandingView.as_view(), name='landing'),
 ]
