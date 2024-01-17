@@ -15,7 +15,7 @@ SECRET_KEY = get_random_secret_key()
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = [os.getenv('DOMAIN'), 'http://localhost:8000']
+CSRF_TRUSTED_ORIGINS = [os.getenv('DOMAIN'), 'http://localhost']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -119,16 +119,18 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 STATICFILES_DIR = [STATIC_DIR]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "server", "static")]
-STATIC_ROOT = os.path.join(SOURCES_ROOT, "server", "static")
+
+MEDIA_ROOT = os.path.join(SOURCES_ROOT, "media")
+MEDIA_URL = "/media/"
+
+STATIC_ROOT = os.path.join(SOURCES_ROOT, "static")
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 )
 
-MEDIA_ROOT = os.path.join(SOURCES_ROOT, "media")
-MEDIA_URL = "/media/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
