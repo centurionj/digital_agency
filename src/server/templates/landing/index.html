@@ -26,7 +26,7 @@
                   Мы <span class="text-gradient-primary">превратим</span> ваши идеи в реальность
                 </h1>
                 <div class="d-md-flex align-items-md-start">
-                  <a href="/" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Сотрудничество</a>
+                  <a href="{% url 'services' %}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Сотрудничать</a>
                   <p class="d-lg-block d-none mb-0 ps-md-3">Kinza ведущее цифровое агентство полного цикла услуг, основанное в России. Мы занимаемся мобильной разработкой, web-сайтами и брэндами. Мы делаем так, чтобы люди ценили нас во всем мире.</p>
                 </div>
               </div>
@@ -174,7 +174,7 @@
         </div>
 
         <div class="pt-md-3 pt-2 text-center">
-          <a href="https://silicon.createx.studio/portfolio-grid.html" class="btn btn-lg btn-primary w-sm-auto w-100">Больше работ</a>
+          <a href="{% url 'portfolio' %}" class="btn btn-lg btn-primary w-sm-auto w-100">Больше работ</a>
         </div>
       </section>
 
@@ -182,7 +182,7 @@
       <section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
         <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
           <div class="card-body mx-auto" style="max-width: 860px;">
-            <h2 class="h1 mb-4 text-center">Наши компетенции</h2>
+            <h2 class="h1 mb-4 text-center">Наши услуги</h2>
             <p class="mb-4 pb-3 fs-lg text-center text-muted">Мы полностью понимаем ваш бизнес. Если вам нужно что-то обновить, будем рады помочь вам с услугами, которые мы предоставляем.</p>
 
             <!-- Accordion: Alternative style -->
@@ -196,7 +196,7 @@
                 <div class="accordion-collapse collapse show" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services">
                   <div class="accordion-body pt-0">
                     <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="./Landing_files/01.png" width="200" alt="Digital Marketing" class="me-md-4 mb-md-0 mb-3">
+                      <img src="{% static 'landing/images/01.png' %}" width="200" alt="Digital Marketing" class="me-md-4 mb-md-0 mb-3">
                       <div class="ps-md-3">
                         <p class="mb-0">Nisi, sed accumsan tincidunt pulvinar sapien. Neque, adipiscing posuere amet eget cursus mattis egestas nec quam. Tellus in lectus volutpat tellus bibendum. Etiam id phasellus in proin tristique. Semper habitasse volutpat et urna dui sed in pellentesque purus. Convallis viverra faucibus lacus nunc venenatis.</p>
                       </div>
@@ -213,7 +213,7 @@
                 <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
                   <div class="accordion-body pt-0">
                     <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="./Landing_files/02.png" width="200" alt="Web Development" class="me-md-4 mb-md-0 mb-3">
+                      <img src="{% static 'landing/images/02.png' %}" width="200" alt="Web Development" class="me-md-4 mb-md-0 mb-3">
                       <div class="ps-md-3">
                         <p class="mb-0">Vitae varius euismod egestas egestas lacus. Augue vitae arcu sollicitudin metus iaculis amet, eu at amet. Netus pulvinar tristique ridiculus sed. Viverra ut viverra aenean nisl. Tortor lorem cum congue a. Orci mattis massa tortor magna massa nisi, aliquet risus. Ornare cras aenean pellentesque quam pulvinar at. Libero mollis tortor erat sed. Adipiscing lectus nisi commodo vel. Id augue vitae, hendrerit iaculis.</p>
                       </div>
@@ -230,7 +230,7 @@
                 <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
                   <div class="accordion-body pt-0">
                     <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="./Landing_files/03.png" width="200" alt="Application Development" class="me-md-4 mb-md-0 mb-3">
+                      <img src="{% static 'landing/images/03.png' %}" width="200" alt="Application Development" class="me-md-4 mb-md-0 mb-3">
                       <div class="ps-md-3">
                         <p class="mb-0">Morbi tristique justo, ut ac facilisi vel. Faucibus tortor libero commodo maecenas commodo sed. Sapien, vitae senectus turpis enim habitasse ipsum justo. Sagittis vel tortor velit dapibus dictum facilisis dictumst aliquam. Et, tempus euismod non semper vitae egestas semper eget turpis. Eros, pellentesque sed ut faucibus ac egestas leo metus.</p>
                       </div>
@@ -247,7 +247,7 @@
                 <div class="accordion-collapse collapse" id="collapse-4" aria-labelledby="heading-4" data-bs-parent="#accordion-services">
                   <div class="accordion-body pt-0">
                     <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="./Landing_files/04.png" width="200" alt="Strategy" class="me-md-4 mb-md-0 mb-3">
+                      <img src="{% static 'landing/images/04.png' %}" width="200" alt="Strategy" class="me-md-4 mb-md-0 mb-3">
                       <div class="ps-md-3">
                         <p class="mb-0">Non bibendum mauris velit at enim. Vel tellus nunc malesuada pellentesque feugiat nibh mauris blandit. Tempus, ut vulputate feugiat quis molestie sit eu blandit rhoncus. Iaculis eget magna sit eget eget massa. Diam nunc dolor tristique lectus imperdiet. Nunc, vitae etiam venenatis arcu turpis sollicitudin amet sit. Ac dapibus non erat sed. Auctor eleifend mattis scelerisque gravida felis nibh. Habitant nascetur turpis ullamcorper.</p>
                       </div>
@@ -264,7 +264,7 @@
                 <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
                   <div class="accordion-body pt-0">
                     <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="./Landing_files/05.png" width="200" alt="Digital Advertising" class="me-md-4 mb-md-0 mb-3">
+                      <img src="{% static 'landing/images/05.png' %}" width="200" alt="Digital Advertising" class="me-md-4 mb-md-0 mb-3">
                       <div class="ps-md-3">
                         <p class="mb-0">Nulla odio diam, arcu dictum neque nec cursus. Vel, aliquam nisl ridiculus sed. Pulvinar lectus ac pellentesque sollicitudin tristique aliquet ullamcorper in eu. Tincidunt porta magna faucibus neque, nunc gravida sagittis. Ut tellus sed odio laoreet. Molestie sit viverra maecenas nisl felis consequat.</p>
                       </div>
@@ -584,13 +584,13 @@
             <!-- Pagination (Pager) -->
             <nav class="pagination d-flex justify-content-center justify-content-md-start">
               <div class="page-item me-2">
-                <a class="page-link page-prev btn-icon btn-sm" href="https://silicon.createx.studio/landing-digital-agency.html#" aria-label="Previous slide" tabindex="0" role="button" aria-controls="swiper-wrapper-34b3ecca1fe6a69f">
+                <a class="page-link page-prev btn-icon btn-sm" href="" aria-label="Previous slide" tabindex="0" role="button" aria-controls="swiper-wrapper-34b3ecca1fe6a69f">
                   <i class="bx bx-chevron-left"></i>
                 </a>
               </div>
               <ul class="list-unstyled d-flex justify-content-center w-auto mb-0 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><li class="page-item active" tabindex="0" aria-current="true"><a href="https://silicon.createx.studio/landing-digital-agency.html#" class="page-link btn-icon btn-sm">1</a></li><li class="page-item" tabindex="0"><a href="https://silicon.createx.studio/landing-digital-agency.html#" class="page-link btn-icon btn-sm">2</a></li><li class="page-item" tabindex="0"><a href="https://silicon.createx.studio/landing-digital-agency.html#" class="page-link btn-icon btn-sm">3</a></li></ul>
               <div class="page-item ms-2">
-                <a class="page-link page-next btn-icon btn-sm" href="https://silicon.createx.studio/landing-digital-agency.html#" aria-label="Next slide" tabindex="0" role="button" aria-controls="swiper-wrapper-34b3ecca1fe6a69f">
+                <a class="page-link page-next btn-icon btn-sm" href="" aria-label="Next slide" tabindex="0" role="button" aria-controls="swiper-wrapper-34b3ecca1fe6a69f">
                   <i class="bx bx-chevron-right"></i>
                 </a>
               </div>
@@ -603,7 +603,7 @@
 
               <!-- Author image 1 -->
               <div id="author-1" class="card bg-transparent border-0 swiper-tab active">
-                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url(assets/img/testimonials/01.jpg);"></div>
+                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url({% static 'landing/images/01.jpg' %});"></div>
                 <div class="card-footer d-flex w-100 border-0 pb-0">
                   <img src="{% static 'landing/images/01.svg' %}" width="160" class="d-none d-xl-block" alt="Company logo">
                   <div class="border-start-xl ps-xl-4 ms-xl-2">
